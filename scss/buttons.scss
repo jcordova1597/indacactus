@@ -1,0 +1,165 @@
+/*START Buttons------------------------------------------*/
+a, button{
+  &.btn-1{
+    @include font4;
+    background: $secondary;
+    border-radius: 3px;
+    border: 1px solid $secondary;
+    color: $white !important;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    text-decoration: none !important;
+    &:hover,&:focus,&:active{
+      transition:0.4s;
+      background: $principal;
+      border: 1px solid $principal;
+      text-decoration: none;
+      color: $white;
+    }  
+  }
+  &.btn-2{
+    @include font1;
+    color: $secondary;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.4s;
+    &::after{
+      content: "";
+      transition: 0.4s;
+      background: transparent url('../images/green-arrow.png') no-repeat;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      right: 0;
+    } 
+    &:hover{
+      transition: 0.4s;
+      &::after{
+        right: -15px;
+        
+      }
+    }
+  }
+  &.btn-3{
+    @include font1;
+    color: $yellow;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.4s;
+    &::after{
+      content: "";
+      transition: 0.4s;
+      background: transparent url('../images/yellow-arrow.png') no-repeat;
+      width: 15px;
+      height: 15px;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      right: 0;
+    } 
+    &:hover{
+      transition: 0.4s;
+      &::after{
+        right: -15px;
+        
+      }
+    }
+  }
+  &.btn-4{
+    background:  transparent;
+    border-radius: 0;
+    border: 1px solid $principal;
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 45px;
+    transition: 0.4s;
+    transform: skew(14deg);
+    -webkit-transform: skew(14deg);
+    -moz-transform: skew(14deg);
+    -ms-transform: skew(14deg);
+    -o-transform: skew(14deg);
+    span{
+        color: $principal;
+        display: inline-block;
+        font-size: 22px;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+        text-transform: uppercase;
+        transform: skew(-14deg);
+        -webkit-transform: skew(-14deg);
+        -moz-transform: skew(-14deg);
+        -ms-transform: skew(-14deg);
+        -o-transform: skew(-14deg);
+        transition: 0.4s;
+    }
+    &:hover,&:focus,&:active{
+      transition:0.4s;
+      background: $principal;
+      text-decoration: none;
+      span{
+        color: $white;
+        transition: 0.4s;
+      }
+    }  
+  }
+  &.btn-5{
+    background: #d0cd9b;
+      padding: 10px 35px;
+      color: #1f1f1f;
+      font-size: 22px;
+      font-weight: 700;
+      margin: auto 45px auto 10px;
+      text-transform: uppercase;
+      border-radius: 0;
+      border: 1px solid #d0cd9b;
+      transform: skew(14deg);
+      -webkit-transform: skew(14deg);
+      -moz-transform: skew(14deg);
+      -ms-transform: skew(14deg);
+      -o-transform: skew(14deg);
+      display: inline-block;
+      transition: 0.4s;
+      span{
+        display: inline-block;
+        transform: skew(-14deg);
+        -webkit-transform: skew(-14deg);
+        -moz-transform: skew(-14deg);
+        -ms-transform: skew(-14deg);
+        -o-transform: skew(-14deg);
+      }
+      &:hover{
+        background: darken(#d0cd9b, 10%);
+        // color: $white;
+        transition: 0.4s;
+      }
+  }
+}
+@include mediaqueries(480max) { 
+  a, button{
+    &.btn-1, &.btn-blue, {
+      padding: 15px 12px 14px;
+    }
+  }
+}
+/*END Buttons-------------------------------------*/

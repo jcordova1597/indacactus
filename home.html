@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700,700i" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="home">
+<!-- <span id="gotop"></span> -->
+<header class="header">
+  <section class="search-section">
+    <div class="container">
+      <div class="search">
+         <form method="get" id="searchform" class="searchform" action="\">
+            <div>
+             <label class="screen-reader-text" for="s">Search for:</label>
+             <input type="text" value="" name="s" id="s">
+             <input type="submit" id="searchsubmit" value="Search">
+            </div>
+         </form>
+      </div>
+    </div>
+  </section>
+  <section class="navigation">
+    <div class="container">
+      <div class="top">
+        <div class="logo">
+         <a href="#"><div style="background-image:url('images/logo.svg')" class="menu-logo"></div><div style="background-image:url('images/sticky-logo.svg')" class="menu-logo-sticky"></div></a>
+        </div>
+        <div class="header-top">
+          <div class="socials-header">
+            <ul class="social-networks">
+              <li class="social-icon"><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li class="social-icon"><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="social-icon"><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <button id="open-search"></button>
+        </div>
+      </div>
+      <div class="bottom-t">
+        <nav class="navbar navbar-default">
+          <div class="nav-right">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/"><div class="logo-brand" style="background-image: url('images/sticky-logo.svg');" alt="Logo"></div></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navigation">
+              <ul id="main_menu" class="nav navbar-nav">
+                <li class="dropdown menu-item-has-children active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown menu-item-has-children">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Stories</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown menu-item-has-children">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Retreats</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown menu-item-has-children">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FAQ</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown menu-item-has-children">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">News & Events</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown menu-item-has-children">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+                <li class="give-btn">
+                  <a href="#">Give</a>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </nav>
+      </div>
+    </div><!-- /.container -->
+  </section>
+</header>
+
+<section class="a slider-widget">
+  <div class="slider-a">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="bullets">
+        <ol class="carousel-indicators"></ol>
+      </div>
+      <div class="carousel-inner" role="listbox">
+        <div class="slider-box">
+          <div class="bg-img" style="background-image:url('images/slider.jpg');"></div>
+          <div class="container">
+            <div class="caption-a">
+              <h2>Sanctuary for Families</h2>
+              <hr>
+              <p>Lorem ipsum dolor sit consectetur</p>
+              <a href="#" class="btn-1">Learn More</a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="slider-box">
+          <div class="bg-img" style="background-image:url('images/slider.jpg');"></div>
+          <div class="container">
+            <div class="caption-a">
+              <h2>Sanctuary for Families</h2>
+              <hr>
+              <p>Lorem ipsum dolor sit consectetur</p>
+              <a href="#" class="btn-1">Learn More</a>
+            </div> 
+          </div>
+        </div>
+      </div><!-- End Carousel Inner -->
+      <a class="left carousel-control" href="#home-slider" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" ></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#home-slider" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section-b" style="background-image: url('images/b-bg.jpg');">
+  <div class="container">
+    <div class="text-box">
+      <h2>Our Purpose</h2>
+      <p>To love and serve God and others through the strengthening of families living through traumatic life events.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-c" style="background-image: url('images/c-bg.jpg');">
+  <div class="container">
+    <h2>Stories</h2>
+    <div id="testimonials" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="testimonial-box">
+          <p>" I stayed here while visiting my brother Daniel, he is battling ALS. We hosted a surprise family gathering for him in the barn.  He really enjoyed it and it was wonderful to feel him enveloped in so much love and comfort."</p>
+          <h3>Tina Czybrinski - Port Ludlow, WA</h3>
+        </div>
+        <div class="testimonial-box">
+          <p>" I stayed here while visiting my brother Daniel, he is battling ALS. We hosted a surprise family gathering for him in the barn.  He really enjoyed it and it was wonderful to feel him enveloped in so much love and comfort."</p>
+          <h3>Tina Czybrinski - Port Ludlow, WA</h3>
+        </div>
+        <div class="testimonial-box">
+          <p>" I stayed here while visiting my brother Daniel, he is battling ALS. We hosted a surprise family gathering for him in the barn.  He really enjoyed it and it was wonderful to feel him enveloped in so much love and comfort."</p>
+          <h3>Tina Czybrinski - Port Ludlow, WA</h3>
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#testimonials" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#testimonials" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <a href="#" class="btn-1">Read More</a>
+  </div>
+</section>
+
+<section class="section-d" style="background-image: url('images/d-bg.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="text-box">
+          <h2>How We Help</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure. </p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div class="flex-item">
+            <div class="item-img" style="background-image: url('images/help-1.jpg');"></div>
+            <div class="item-text">
+              <h3>Give</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+              <a href="#" class="btn-2">Learn More</a>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="item-img" style="background-image: url('images/help-2.jpg');"></div>
+            <div class="item-text">
+              <h3>Sponsor</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+              <a href="#" class="btn-2">Learn More</a>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="item-img" style="background-image: url('images/help-3.jpg');"></div>
+            <div class="item-text">
+              <h3>Donate</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+              <a href="#" class="btn-2">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-e" style="background-image: url('images/e-bg.jpg');">
+  <div class="container">
+    <div class="d-flex">
+      <div class="left-e">
+        <h2>News</h2>
+        <div class="instamask">
+         <div class="news-img" style="background-image:url('images/news-img.jpg');"></div>
+          <svg>
+            <!-- THE mask -->
+            <mask id="mask" maskContentUnits="objectBoundingBox">
+              <!-- using an img, but this img is black/transparent so we filter it to make it white -->
+              <image xlink:href="images/e-frame.png" width="1" height="1" preserveAspectRatio="none" filter="url(#filter)"/>
+            </mask>
+
+            <!-- the filter to make the image white -->
+            <filter id="filter">
+              <feFlood flood-color="white" />
+              <feComposite in2="SourceAlpha" operator="in" />
+            </filter>
+          </svg>
+       </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+        <a href="#" class="btn-1">Learn More</a>
+      </div>
+      <div class="right-e">
+        <h2>Events</h2>
+        <div class="d-flex justify-content-between event-box">
+          <div class="number">
+            <h3>28<span>Nov</span></h3>
+          </div>
+          <div class="text-box">
+            <p>Giving tuesday - Day of Giving</p>
+            <span>8:00 am - 11:00 am CST</span>
+            <a href="#" class="btn-3">Read More</a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between event-box">
+          <div class="number">
+            <h3>28<span>Nov</span></h3>
+          </div>
+          <div class="text-box">
+            <p>Giving tuesday - Day of Giving</p>
+            <span>8:00 am - 11:00 am CST</span>
+            <a href="#" class="btn-3">Read More</a>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between event-box">
+          <div class="number">
+            <h3>28<span>Nov</span></h3>
+          </div>
+          <div class="text-box">
+            <p>Giving tuesday - Day of Giving</p>
+            <span>8:00 am - 11:00 am CST</span>
+            <a href="#" class="btn-3">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-f" style="background-image: url('images/f-bg.jpg');">
+  <div class="container">
+    <h2>Our Social Media</h2>
+  </div>
+</section>
+
+<section class="section-g" style="background-image: url('images/g-bg.jpg');">
+  <div class="container">
+    <h2>Stay Connected</h2>
+    <div class="sign-up-section">
+      <div class="gf_browser_chrome gform_wrapper" id="gform_wrapper_3">
+        <form method="post" enctype="multipart/form-data" id="gform_3" action="/newsletter/?preview_id=98&amp;preview_nonce=ffd845df65&amp;_thumbnail_id=-1&amp;preview=true">
+          <div class="gform_body"><ul id="gform_fields_3" class="gform_fields top_label form_sublabel_below description_below"><li id="field_3_2" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible"><label class="gfield_label" for="input_3_2">Email<span class="gfield_required">*</span></label><div class="ginput_container ginput_container_email">
+              <input name="input_2" id="input_3_2" type="text" value="" class="medium" tabindex="1" placeholder="Enter your email address" aria-required="true" aria-invalid="false">
+          </div></li>
+              </ul>
+          </div>
+          <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_3" class="gform_button button" value="Submit" tabindex="2" onclick="if(window[&quot;gf_submitting_3&quot;]){return false;}  window[&quot;gf_submitting_3&quot;]=true;  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_3&quot;]){return false;} window[&quot;gf_submitting_3&quot;]=true;  jQuery(&quot;#gform_3&quot;).trigger(&quot;submit&quot;,[true]); }">
+              <input type="hidden" class="gform_hidden" name="is_submit_3" value="1">
+              <input type="hidden" class="gform_hidden" name="gform_submit" value="3">
+
+              <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+              <input type="hidden" class="gform_hidden" name="state_3" value="WyJbXSIsIjRkYTMwOThhMzFlOWJkZmNiMDQwNTA1ZjJiYzUyNzFjIl0=">
+              <input type="hidden" class="gform_hidden" name="gform_target_page_number_3" id="gform_target_page_number_3" value="0">
+              <input type="hidden" class="gform_hidden" name="gform_source_page_number_3" id="gform_source_page_number_3" value="1">
+              <input type="hidden" name="gform_field_values" value="">
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" style="background-image: url('images/footer-bg.jpg');">
+  <div class="footer-top">
+    <div class="container">
+      <div class="flex-container">
+        <div class="flex-item">
+          <div class="foundation-logo">
+            <a href="#">
+              <div style="background-image: url('images/sticky-logo.svg')" class="logo-footer">
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="flex-item">
+          <p><strong>Address</strong></p>
+          <p>314 County Road 5830,</p>
+          <p>Cabool, Missouri 65689</p>
+          <div class="social-f">
+            <ul class="social-networks">
+              <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-item">
+          <p><strong>Number</strong></p>
+          <p>417-469-0810</p>
+        </div>
+        <div class="flex-item">
+          <p><strong>Email</strong></p>
+          <p>trinityspringsmo@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="copyright-section">
+        <div class="left">
+          <div class="copy-r">
+            © <span>2019 Trinity Springs. </span> All Rights Reserved. Disclaimer
+          </div>
+        </div>
+        <div class="right">
+          <div class="elevationweb">
+            <a href="http://www.elevationweb.org/" target="_blank" title="Websites for nonprofits">Design by </a><a href="http://www.elevationweb.org/our-work/" target="_blank" title="Elevation Web"><span>Elevation</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,646 @@
+@import "bootstrap.min.css";
+@import "font-awesome.css";
+@import "../scss/colors";
+@import "../scss/media-queries";
+@import "../scss/mixins";
+@import "../scss/fonts";
+@import "../scss/helpers";
+@import "../scss/buttons";
+@import "../scss/header";
+@import "../scss/search";
+@import "../scss/landing";
+@import "../scss/footer";
+@import "../scss/slider";
+@import "../scss/breadcrumbs";
+@import "../scss/interior";
+@import "../scss/sidebar";
+@import "../scss/single";
+@import "../scss/category";
+@import "../scss/pagination";
+@import "../scss/search-page";
+@import "../scss/error";
+@import "../scss/accordion";
+@import "../scss/forms";
+@import "../scss/social-feed";
+@import "../scss/staff-members";
+@import "../scss/custom-donate";
+@import "../scss/sign-up";
+@import "../scss/form-donate-custom";
+@import "../scss/social-stream";
+@import "../scss/impact";
+@import "../scss/events";
+@import "../scss/volunteer";
+@import "../scss/team-bios";
+@import "../scss/landing-interior";
+
+
+
+
+/*START html & body-------------------------------------*/
+
+html,body{
+  @include font1;
+  color:$light-text;
+  font-size:16px;
+  a{
+    outline: none !important;
+  }
+  h1,h2,h3,h4,h5,h6{
+    @include font2;
+    font-weight: 700;
+  }
+  .classic-text-widget{
+    display: inline-block !important;
+  }
+}
+
+/*END html & body-------------------------------------*/
+/*START FrontPage (similar elements)-------------------------------------------*/
+body.home{
+  /*global Css*/
+
+  p{
+    font-size: 18px;
+    color: #474747;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 0 0 15px 0;
+  }
+}
+/*global Css*/
+
+.section-b{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  position: relative;
+  text-align: center;
+  h2{
+    @include font1;
+    font-weight: 400;
+    font-size: 34px;
+    color: $principal;
+    margin-top: 0 !important;
+    position: relative;
+    display: block;
+    padding-top: 75px;
+    margin-bottom: 25px !important;
+    &::before{
+      content: "";
+      background: transparent url('../images/b-logo.svg') no-repeat;
+      width: 50px;
+      height: 45px;
+      background-size: contain;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  p{
+    margin: 0 auto 15px !important;
+    width: 60%;
+    font-size: 22px !important;
+    color: $principal !important;
+  }
+}
+
+.section-c{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px 0;
+  position: relative;
+  text-align: center;
+  &::before{
+    content: "";
+    background: transparent url('../images/rope.png') no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    top: -7.5px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 1;
+  }
+  &::after{
+    content: "";
+    background: transparent url('../images/c-shadow.png') no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  h2{
+    @include font1;
+    color: $white;
+    font-size: 34px !important;
+    font-weight: 400;
+    margin-bottom: 30px !important;
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 3;
+  }
+  .btn-1{
+    position: relative;
+    margin-top: 30px !important;
+    z-index: 2;
+  }
+  #testimonials{
+    z-index: 3;
+    position: relative;
+    .item{
+      width: 100%;
+    }
+    &.carousel-fade {
+      .carousel-inner {
+        .left .caption-a,.right .caption-a{
+          -webkit-animation-name: opacityTransitionOff; /* Safari 4.0 - 8.0 */
+          -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+          animation-name: opacityTransitionOff;
+          animation-duration: 0.4s;
+        }
+         /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes opacityTransitionOff {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+        /* Standard syntax */
+        @keyframes opacityTransitionOff {
+            0% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+          .active .caption-a{
+            -webkit-animation-name: opacityTransition; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 0.8s; /* Safari 4.0 - 8.0 */
+            -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+            animation-name: opacityTransition;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+          }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes opacityTransition {
+            0% {opacity: 0;}
+            100% {background-color: 1;}
+        }
+        /* Standard syntax */
+        @keyframes opacityTransition {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        .item {
+          transition-property: opacity;
+        }        
+        .item,
+        .active.left,
+        .active.right {
+          opacity: 0;
+        }
+        .active,
+        .next.left,
+        .prev.right {
+          opacity: 1;
+        }
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+          left: 0;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      .carousel-control{
+        display: none;
+      }
+      .carousel-indicators{
+        bottom: -40px;
+        display: none !important;
+        left: 0 !important;
+        width: unset !important;
+        margin: 0 20px 0 5px !important;
+        li{
+          width: 8px;
+          border: none !important;
+          margin: 0 6px;
+          height: 8px;
+          border-radius: 50%;
+          background: #c291b8;
+          &.active{
+            background: $white !important;
+          }
+        }
+      }
+    }
+  }
+  .testimonial-box{
+    position: relative;
+    z-index: 1;
+    width: 76%;
+    margin: 0 auto;
+    
+    p{
+      @include font1;
+      color: $white !important;
+      font-weight: 400;
+      font-size: 23px !important;
+      margin-bottom: 30px !important;
+      line-height: 1.6em !important;
+    }
+    h3{
+      @include font1;
+      font-weight: 700;
+      color: $white !important;
+      margin-top: 0 !important;
+      margin-bottom: 30px !important;
+      font-size: 20px !important;
+    }
+  }
+}
+
+.section-d{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  .text-box{
+    position: relative;
+    text-align: center;
+    h2{
+      @include font1;
+      font-weight: 400 !important;
+      color: $principal !important;
+      font-size: 34px !important;
+      margin-top: 0 !important;
+      margin-bottom: 25px !important;
+      position: relative;
+    }
+    p{
+      @include font1;
+      font-weight: 400 !important;
+      font-size: 22px !important;
+      color: $principal !important;
+      margin-bottom: 50px !important;
+    }
+  }
+  .d-flex{
+    align-items: flex-start !important;
+    .flex-item{
+      width: 295px;
+      position: relative;
+      margin: 0 1%;
+      &:first-child{
+        margin: 0 2% 0 0;
+      }
+      &:last-child{
+        margin: 0 0 0 2%;
+      }
+      .item-img{
+        width: 100%;
+        max-width: 100%;
+        height: 255px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        &::before{
+          content: "";
+          background: transparent url('../images/p-frame.png') no-repeat;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-size: 100% 100%;
+        }
+      }
+      .item-text{
+        h3{
+          @include font1;
+          font-weight: 400;
+          font-size: 28px;
+          color: $principal;
+          margin-top: 30px !important;
+          margin-bottom: 25px !important;
+        }
+        p{
+          @include font1;
+          font-weight: 400 !important;
+          font-size: 19px !important;
+          color: $principal;
+        }
+      }
+    }
+  }
+}
+
+.section-e{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 65px 0;
+  &::before{
+    content: "";
+    background: transparent url('../images/e-shadow.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    z-index: 1;
+  }
+  &::after{
+    content: "";
+    background: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 90%;
+    margin: auto;
+    width: 2px;
+    z-index: 2;
+  }
+  h2{
+    @include font1;
+    color: $white;
+    margin-top: 0 !important;
+    margin-bottom: 25px !important;
+    position: relative;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+  }
+  p{
+    @include font1;
+    color: $white !important;
+    font-weight: 400 !important;
+    font-size: 19px !important;
+    margin-bottom: 35px !important;
+    line-height: 1.6em !important;
+  }
+  .left-e,.right-e{
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 0 65px 0 35px;
+  }
+  .left-e{
+    .news-img{
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 160px;
+      margin-bottom: 25px;
+    }
+    .instamask div.news-img {
+       //-webkit-mask: url(‘../images/mask-b.png’) no-repeat;
+       -webkit-mask-box-image: url("../images/e-frame.png");
+       -moz-mask-box-image: url("../images/e-frame.png");
+       mask: url("../images/e-frame.png#mask");
+       -webkit-mask-size: 100% 100%;
+       -webkit-mask-position: center;
+       -moz-mask-size: 100% 100%;
+       -moz-mask-position: center;
+       transition: -webkit-mask-size .3s;
+       transition: -moz-mask-size .3s;
+    }
+    svg{
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  }
+  .right-e{
+    .event-box{
+      width: 100%;
+      position: relative;
+      margin-bottom: 35px !important;
+      .number{
+        width: 70px;
+        text-align: center;
+        h3{
+          @include font1;
+          font-weight: 700 !important;
+          font-size: 63px;
+          color: $white;
+          display: block;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+          span{
+            display: block;
+            font-weight: 400 !important;
+            font-size: 28px !important;
+          }
+        }
+      }
+      .text-box{
+        width: 80%;
+        p{
+          @include font1;
+          font-weight: 400 !important;
+          font-size: 24px !important;
+          margin-bottom: 5px !important;
+          color: $white !important;
+        }
+        span{
+          @include font1;
+          font-weight: 400 !important;
+          font-size: 20px !important;
+          display: block !important;
+          color: $white !important;
+          margin-bottom: 15px;
+          position: relative !important;
+        }
+      }
+    }
+  }
+}
+
+.section-f{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 65px 0;
+  h2{
+    @include font1;
+    font-weight: 400;
+    font-size: 36px;
+    color: $principal;
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
+    text-align: center;
+  }
+}
+
+.section-g{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+  &::before{
+    content: "";
+    background: transparent url('../images/rope.png') no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: absolute;
+    top: -7.5px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    z-index: 1;
+  }
+  &::after{
+    content: "";
+    background: transparent url('../images/g-shadow.png') no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  h2{
+    @include font1;
+    font-weight: 400 !important;
+    font-size: 50px !important;
+    color: $white !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+/*END FrontPage-------------------------------------------*/
+
+/* Media queries----------------------------------*/
+
+@include mediaqueries(1440max) {
+
+}
+@include mediaqueries(1370max) {
+
+}
+@include mediaqueries(1200max) {
+  .section-d{
+    .d-flex{
+      .flex-item{
+        width: 30% !important;
+      }
+    }
+  }
+  .section-e{
+    .d-flex{
+      .right-e{
+        .event-box{
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .text-box{
+            text-align: center;
+            width: 100% !important;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaqueries(991max) {
+
+  .section-d{
+    .d-flex{
+      flex-direction: column !important;
+      .flex-item{
+        margin: 0 0 55px !important;
+      }
+    }
+  }
+  .section-e{
+    &::after{
+      content: none !important;
+    }
+    .d-flex{
+      flex-direction: column;
+      .left-e, .right-e{
+        width: 100%;
+        h2{
+          text-align: center;
+        }
+      }
+      .left-e{
+        margin-bottom: 65px;
+        text-align: center;
+      }
+      .right-e{
+        .event-box{
+          flex-direction: column;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .section-e{
+    .d-flex{
+      .left-e,.right-e{
+        padding: 0 !important;
+      }
+    }
+  }
+}
+@include mediaqueries(767max) {
+  
+  
+}
+@include mediaqueries(480max) {
+  .d-flex{
+    flex-direction: column !important;
+  }
+  .section-b{
+    .text-box{
+      p{
+        width: 100% !important;
+      }
+    }
+  }
+  .section-c{
+    .testimonial-box{
+      p{
+        font-size: 20px !important;
+      }
+    }
+  }
+  .section-e{
+    .d-flex{
+      .left-e,.right-e{
+        padding: 0 !important;
+      }
+    }
+  }
+  .section-g{
+    h2{
+      font-size: 32px !important;
+    }
+  }
+}
+@include mediaqueries(320max) {
+
+}

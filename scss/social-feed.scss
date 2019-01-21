@@ -1,0 +1,98 @@
+.e-left{ 
+  /* facebook fedd */
+  #cff .cff-author {
+    .cff-page-name.cff-author-date{
+      @include font2;
+      font-size: 19px;
+      font-weight: 600;
+    }
+    .cff-story{
+      @include font1;
+      display: block;
+      font-size: 15px;
+      font-weight: 400;
+    }   
+    .cff-date {
+      @include font1;
+      font-size: 17px;
+    }
+  }
+}
+        
+.e-right{
+  // twiiter feed
+  #ctf.ctf-masonry{
+    .ctf-item{
+      background: #fff;
+      border-bottom: none;
+      border-radius: 7px;
+      box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.25);
+      padding: 10px 4.5%;
+      padding-bottom: 120px !important;
+      margin: 0 0 25px 25px;
+      width: 45%;
+      .ctf-author-box{
+        position: absolute;
+        bottom: 15px;
+        .ctf-author-name{
+          @include font2;
+          font-weight: 600;
+          font-size: 19px;
+        }
+      }
+      .ctf-tweet-content{
+        .ctf-tweet-text{
+          line-height: 1.2em;
+          a{
+            word-break: break-all;
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaqueries(1200max) {
+  .e-right #ctf.ctf-masonry .ctf-item{
+    margin: 0 0 25px 15px;
+    width: 43%;
+  }
+
+}
+@include mediaqueries(991max){  
+  section.section-social-media .box-social{
+    padding-right: 10px !important; 
+  }      
+  .e-right{
+    // twiiter feed
+    #ctf{
+      .ctf-item{
+        background: #fff;
+        border-bottom: none;
+        border-radius: 7px;
+        box-shadow: 0px 5px 18px 5px rgba(0,0,0,0.25);
+        padding: 10px 4.5%;
+        padding-bottom: 120px !important;
+        margin: 20px auto 20px;
+        width: 90%;
+        position: relative;
+        .ctf-author-box{
+          position: absolute;
+          bottom: 15px;
+          .ctf-author-name{
+            @include font2;
+            font-weight: 600;
+            font-size: 19px;
+          }
+        }
+        .ctf-tweet-content{
+          .ctf-tweet-text{
+            line-height: 1.2em;          
+          }
+        }
+      }
+    }
+  }
+}
+@include mediaqueries(767max){        
+  
+}

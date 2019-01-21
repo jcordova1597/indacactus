@@ -1,0 +1,20 @@
+/*300 light, 400 regular, 700 bold,*/
+@mixin font1 {
+  font-family: 'Noto Serif', serif;
+}
+/*300 light, 400 regular,600 semi-bold, 700 bold*/
+@mixin font2 {
+  font-family: 'Noto Serif', serif;
+}
+/*400 regular, bold 800 */
+@mixin font3{
+	font-family: 'Noto Serif', serif;
+}
+/*400 regular, 700 bold*/
+@mixin font4{
+	font-family: 'Noto Serif', serif;
+}
+
+@mixin font5{
+	font-family: 'Noto Serif', serif;
+}

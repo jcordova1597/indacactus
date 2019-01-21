@@ -1,0 +1,330 @@
+/*START Landing--------------------------------------*/
+.landing-interior{
+	/*TOP------------------------------*/
+		.interior-top{
+			.caption-a{
+				h1{
+					text-shadow: 0 0 45px #000;
+				}
+			}
+		}
+	/*END TOP----------------------------*/
+
+	/*BODY--------------------------------*/
+		.landing-a{
+			padding: 60px 0;
+			background: #c01a35;
+			text-align: center;
+			p{
+				@include font3;
+				font-size: 20px;
+				color: $white;
+			}
+		}
+		.landing-b{
+		  padding: 80px 0 120px;
+		  position: relative;
+		  background: $white;
+		  overflow: hidden;
+		  text-align: center;
+		  h2{
+		  	@include font1;
+		  	font-weight: 700;
+		  	font-size: 36px;
+		  	color: $principal;
+		  	margin-bottom: 25px;
+		  	text-align: center;
+		  	text-transform: uppercase;
+		  }
+		  .member-link{
+				display: inline-block;
+				margin: 0 2%;
+			  width: 170px;
+			  .member-box{
+			  	position: relative;
+			  	.member-img{
+			  		width: 100%;
+			  		height: 170px;
+			  		background-size: cover;
+			  		background-position: top;
+			  		background-repeat: no-repeat;
+			  	}
+			  	.member-body{
+						background: $principal;
+						padding: 15px;
+						text-align: center;
+						h3{
+							@include font3;
+							color: $white;
+							font-size: 20px;
+							font-weight: 700;
+							margin: 0 !important;
+						}
+						.arrow-box{
+							position: absolute;
+							width: 60px;
+							height: 42px;
+							background: $secondary;
+							right: -15px;
+							bottom: -30px;
+							transition: 0.4s;
+							i{
+				        @include center(-50%, -50%);
+				        transition: 0.4s;
+				        color: $white;
+				        font-size: 30px;
+				        left: 50%;
+				        position: absolute;
+				        top: 50%;
+				      }
+						}
+			  	}
+			  }
+		  	&:hover{
+		  		text-decoration: none;
+		  		.member-box{
+		  			.member-body{
+		  				.arrow-box{
+		  					background: $white;
+		  					border: 1px solid $secondary;
+		  					transition: 0.4s;
+		  					i{
+		  						transition: 0.4s;
+		  						color: $principal;
+		  					}
+		  				}
+		  			}
+		  		}
+		  	}
+		  }
+		  .btn-2{
+		  	margin-top: 75px;
+		  }
+		}
+		.landing-c{
+			background: $principal;
+			padding: 70px 0 0;
+			h2{
+				@include font1;
+				color: $white;
+				text-transform: uppercase;
+				margin-bottom: 25px;
+				text-align: center;
+			}
+			.job_filters{
+				background: transparent !important;
+				color: $white !important;
+				.search_jobs{
+					width: 80%;
+					margin: 0 auto 25px;
+					.search_keywords, .search_location{
+						width: 45%;
+						input{
+							@include font3;
+							background: #ebebeb !important;
+							color: $principal !important;
+							border: none;
+							border-radius: 5px;
+							padding-left: 25px;
+							height: 50px;
+							font-size: 20px;
+							outline: none;
+						}
+					}
+				}
+				.job_types{
+					background: transparent !important;
+					li{
+						border-right: none !important;
+						margin: 0 30px !important;
+						padding:30px 0 !important;
+						label{
+							@include font3;
+							font-size: 18px;
+							font-weight: 400;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+			div.job_listings {
+				ul.job_listings{
+					color: $white !important;
+				}
+				
+			}
+
+		}
+		.landing-d{
+		  position: relative;
+		  overflow: hidden;
+		  margin: 70px 0;
+		  .f-img{
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    left: 2%;
+		    top: 0;
+		    position: absolute;
+		    width: 50%;
+		    height: 100%;
+		  }
+		  .text-f{
+		    width: 98%;
+		    box-shadow: 10px 10px 65px #000;
+		    margin: 45px 0;
+		    position: relative;
+		    padding: 60px;
+		    background: $white;
+		    h2{
+		      @include font1;
+		      font-size: 49px;
+		      font-weight: 700;
+		      color: $secondary;
+		      display: block;
+		      margin-bottom: 25px;
+		      margin-top: 0 !important;
+		      padding-left: 15px;
+		      position: relative;
+		      span{
+		        color: $principal;
+		        display: block;
+		      }
+		      &::before{
+		        content: "";
+		        background: #fac300;
+		        height: 100%;
+		        width: 2px;
+		        position: absolute;
+		        left: 0;
+		        top: 0;
+		        bottom: 0;
+
+		      }
+		    }
+		    p{
+		      font-size: 18px;
+		      color: $principal
+		    }
+		    a.red-arrow{
+		      background: $secondary;
+		      height: 45px;
+		      padding: 15px 35px;
+		      position: absolute;
+		      right: 5%;
+		      bottom: -20px;
+		      width: 60px;
+		      i{
+		        @include center(-50%, -50%);
+		        color: $white;
+		        font-size: 30px;
+		        left: 50%;
+		        position: absolute;
+		        top: 50%;
+		      }
+		    }
+		  }
+		}
+		.landing-e{
+			padding: 110px 0;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			&::before{
+				content: "";
+				background: url('../images/landing-i-s.png') no-repeat;
+				background-size: 100% 100%;
+				background-position: left;
+				background-repeat: no-repeat;
+				left: 0;
+				top: 0;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+			.text-box{
+				width: 34%;
+				.text-testimonial-slider{
+		      position: relative;
+		      left: unset;
+		      display: inline-block;
+		      text-align: left;
+		      float: left;
+		      h2{
+		        @include font1;
+		        font-size: 49px !important;
+		        color: $principal;
+		        font-weight: 700 !important;
+		        margin-bottom: 25px !important;
+		        display: block;
+		        text-transform: uppercase;
+		        position: relative;
+		        span{
+		          display: block;
+		        }
+		        &::before{
+		          content: "";
+		          position: absolute;
+		          top: -25px;
+		          width: 60px;
+		          height: 2px;
+		          background: $secondary;
+		          left: 0;
+		        }
+		      }
+		      p{
+		        @include font2;
+		        font-size: 18px !important;
+		        color: $principal;
+		        margin-bottom:50px;
+		      }
+		    }
+			}
+		}
+	/*END BODY-------------------*/
+
+
+}
+
+/*END Landing------------------------------------------*/
+@include mediaqueries(1200max) {
+
+}  
+@include mediaqueries(991max) {
+  
+}
+@include mediaqueries(767max) {
+ 	.landing-interior{
+		.landing-d{
+	    .f-img{
+	      position: relative;
+	      width: 100%;
+	      height: 400px;
+	      left: 0;
+	    }
+	    .text-f{
+	      width: 100%;
+	      box-shadow: 4px 4px 25px #000;
+	    }
+	  }
+ 		
+ 	}
+ 	.landing-interior .landing-e::before{
+ 		background: rgba(255, 255, 255, .4);
+ 	}
+ 	.landing-interior .landing-e{
+ 		background: none !important;
+ 	}
+ 	.landing-interior .landing-b .member-link{
+		margin-bottom: 45px;
+	}
+}
+@include mediaqueries(480max) {
+	.landing-interior .landing-b .member-link{
+		margin-bottom: 45px;
+	}
+}
+@include mediaqueries(320max) {
+
+}

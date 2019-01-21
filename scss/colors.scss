@@ -1,0 +1,20 @@
+//Variables ColorS
+
+$principal: #684531;  // brown
+$light-principal:lighten($principal, 5%); 
+$dark-principal:darken($principal, 5%);
+
+$secondary: #7cb830;  // green
+$light-secondary:lighten($secondary, 5%);
+
+//GENERAL
+$white: #fff; // USED
+$grey: #bdbdbd; //USED
+$black: #000000; //USED
+$yellow: #efb920;
+
+//TEXT
+$text:#333333; // grey-home-paragraft
+$light-text:#464648; // white
+$dark-text: #1F1F1F; // headings blue
+

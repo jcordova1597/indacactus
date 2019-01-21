@@ -1,0 +1,103 @@
+/*STRART Search Widget------------------------------------------*/
+body.search{
+  h1{
+    span{
+      font-size: inherit;
+    }
+  }
+}
+.search-section{
+  display: none;
+  background: $secondary;
+}
+div.search{
+  @include font1;
+  background: $secondary;
+  display: block;
+  float: none;
+  position: relative;
+  vertical-align: middle;
+  &::before{
+    content: "";
+    background: darken($secondary, 10%);
+    height: 100%;
+    left:0;
+    position: absolute;
+    top:0;
+    width: 2px;
+  }
+  &::after{
+    content: "";
+    background: darken($secondary, 10%);
+    height: 100%;
+    position: absolute;
+    right:0;
+    top:0;
+    width: 2px;
+  }
+  .screen-reader-text{
+    display: none;
+  }
+ .fa-times{
+    color:$white;
+    cursor:pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+    &:hover{
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+  #searchsubmit{
+    border:none;
+    color:$white;
+    border-radius:0;
+    margin-left: -4px;
+    height: 47px;
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    background-color:transparent;
+    background: transparent url("../images/search-icon.png") no-repeat;
+    background-position: center;
+    text-indent: -99999999px;
+    width: 50px;
+    transition:0.4s;
+    background-size:24px 24px; 
+    opacity: 0.7;
+    transition: 0.4s;
+    float: right;
+    &:hover{
+      background-size:18px 18px;
+      opacity: 1; 
+    }
+  }
+  #s{
+    background: transparent;
+    border: none;
+    color:$white;
+    font-size: 20px;
+    height: 47px;
+    padding: 15px;
+    vertical-align: middle;
+    width: calc(100% - 50px);
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $white;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $white;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $white;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: $white;
+  }
+}
+@include mediaqueries(767max) {
+
+}
+/*END Search Widget------------------------------------------*/

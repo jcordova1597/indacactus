@@ -1,0 +1,77 @@
+.accordion{
+  margin: 0 0 20px 0 !important;
+  br{
+    display: none;
+  }
+  p{
+    margin-bottom: 0;
+  }
+}
+h1[id*="accordion-"], 
+h2[id*="accordion-"],
+h3[id*="accordion-"],
+h4[id*="accordion-"],
+h5[id*="accordion-"],
+h6[id*="accordion-"]{    
+    background: $secondary !important;
+    border-radius: 0; 
+    color: #fff !important;;
+    cursor:pointer;
+    font-size: 25px !important;;
+    padding: 15px 40px 15px 10px !important;;
+    position: relative;
+    &::after{
+     content: "\f067";
+     position:absolute;      
+     right: 70px;
+     color: $white;
+     display: inline-block;
+     font: normal normal normal 14px/1 FontAwesome;
+     font-size: inherit;
+     text-rendering: auto;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;    
+     }
+     &.open{
+      background: $principal;
+      color: #fff;
+       &::after{
+        color: $light-text;
+       }
+     }
+    &:hover, &:active, &:focus{
+      background: $principal;
+      color: #fff;
+      outline: none;
+      &::after{
+        color: #fff;
+      }
+    }
+  }
+.accordion-title{
+ padding-right: 25px;
+ &::after{
+     content: "\f067";
+     position:absolute;      
+     right: 30px;
+     color: $light-text;
+     display: inline-block;
+     font: normal normal normal 14px/1 FontAwesome;
+     font-size: inherit;
+     text-rendering: auto;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;    
+     }
+   &.open{
+     &::after{
+      content: '\f068';
+      color: $light-text;
+     }
+   }
+}
+  .accordion-content{    
+    background: transparent;
+    border-top:none;
+    border: none;
+    padding:15px;
+  }
